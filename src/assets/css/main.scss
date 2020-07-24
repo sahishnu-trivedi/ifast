@@ -1,0 +1,57 @@
+// Declaring Variables
+:root {
+  --primary-color: #FB5951;
+  --secondary-color: #f5965199;
+  --font-color: #000;
+  --sub-heading-color: #00000099;
+  --bg-color: #F1E8E6;
+  --box-bg-color: #FFF;
+  --status-orange: #F59651;
+  --status-green: #31AB3F;
+}
+
+[data-theme='dark'] {
+  --primary-color: #3E64FA;
+  --secondary-color: #21BBDB99;
+  --font-color: #fff;
+  --sub-heading-color: #F5F5F599;
+  --bg-color: #232F5A;
+  --box-bg-color: #1A223F;
+  --status-orange: #21BBDB;
+  --status-green: #31AB3F;
+}
+
+// Reset CSS
+*{margin:0;padding:0;box-sizing:border-box;}
+*:after,*:before{box-sizing:border-box;}
+html{font-size:14px}
+:focus{outline:0;box-shadow:none;}
+body{background: var(--bg-color); font-family: 'sans-serif', 'arial', 'Neue Haas Grotesk Display Pro'; color: var(--font-color);}
+a{color:inherit;text-decoration:none; transition: all 0.3s ease-in-out;}
+a:active,a:hover{outline:0; text-decoration: none;}
+a:hover{cursor:pointer; color: inherit;}
+ol,ul{list-style:none;}
+input,textarea,button{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;border-radius:0;line-height: normal;outline:0;box-shadow:none;border: none;font-family: inherit;}
+
+.flexbox{display: flex; align-items: center; flex-wrap: wrap;}
+.mainContainer{max-width: 1660px; margin: 70px auto; padding: 0 20px;}
+
+.theme-btn{padding: 10px 20px; border-radius: 10px; display: inline-block; color: #fff; margin-bottom: 30px;}
+.light-btn{background: var(--primary-color); margin-right: 14px;}
+.dark-btn{background: #000;}
+.wrapper{display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;
+  @media(max-width: 1024px){
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+@media(max-width: 760px){
+    grid-template-columns: 1fr;
+}
+  .left-column{display: grid; gap: 40px;}
+  .box{background: var(--box-bg-color); border-radius: 30px; padding: 25px 43px; height: 100%;
+      .box-title{font-size: 16px;}
+      .box-subtitle{font-size: 12px; color: var(--sub-heading-color); margin-top: 5px;}
+      .box-name{font-size: 20px;}
+      .box-designation{color: var(--secondary-color);} 
+    }
+  }
